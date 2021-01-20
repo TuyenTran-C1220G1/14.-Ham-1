@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function minIndexArray(arr) {
+        let min = arr[0];
+        let foundIndex = 0;
+        if (arr.length == 0) {
+            foundIndex = -1;
+            return foundIndex;
+        } else {
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] < min) {
+                    min = arr[i];
+                    foundIndex = i;
+                }
+            }
+            return foundIndex;
+        }
+    }
+    let arr = [-1, -6, 3, -7];
+    let minIndex = minIndexArray(arr);
+    alert(minIndex);
+</script>
